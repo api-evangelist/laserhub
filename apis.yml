@@ -1,19 +1,54 @@
 aid: laserhub
 name: Laserhub
-description: Laserhub is a company surfaced as a portfolio company of point-nine and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'Laserhub is a Stuttgart-based digital procurement platform for custom-manufactured
+  metal and plastic parts, founded to replace the traditional RFQ cycle for sheet metal, tube and
+  machined components with instant online quoting. Buyers register at app.laserhub.com, upload CAD
+  files, and receive an automated feasibility check plus an instant quote covering laser cutting,
+  plasma and flame cutting, tube laser cutting, bending, CNC turning and milling, weldments, and
+  secondary processes such as threading, deburring, galvanising, powder coating and engraving.
+  Laserhub is itself the contracting party and allocates each order algorithmically across a
+  network of roughly 100 ISO 9001:2015 certified producers in Germany, Austria and Switzerland,
+  serving both SMEs and DAX40 manufacturers with framework agreements, a parts library, sample
+  parts, inspection certificates and design guidelines. Laserhub publishes no public developer API,
+  SDK, or API documentation as of this profile: api.laserhub.com is a private AWS API Gateway that
+  rejects unauthenticated requests, and the only machine-adjacent ordering channel the company
+  documents is an email-based ordering flow (anfrage@laserhub.com) that its own release notes
+  describe as still in a test phase for a subset of customers.'
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://laserhub.com/app/uploads/2024/01/laserhub-logo-rund.png
 url: https://raw.githubusercontent.com/api-evangelist/laserhub/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - point-nine
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profile
+x-tier-reason: enriched-no-public-api
+x-api-surface: none-public
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Manufacturing
+- Metal Fabrication
+- Procurement
+- Laser Cutting
+- CNC Machining
+- Sheet Metal
+- Supply Chain
+- Marketplace
+- Industrial
+- Germany
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +58,54 @@ maintainers:
 common:
 - type: Website
   url: https://laserhub.com
+- type: About
+  url: https://laserhub.com/ueber-uns/
+- type: Platform
+  url: https://laserhub.com/plattform/
+- type: Blog
+  url: https://laserhub.com/blog/
+- type: Pricing
+  url: https://laserhub.com/plattform/preise/
+- type: SignUp
+  url: https://app.laserhub.com/register/email
+- type: Login
+  url: https://app.laserhub.com/login
+- type: Support
+  url: https://laserhub.com/plattform/kundenservice/
+- type: HelpCenter
+  url: https://laserhub.com/plattform/faq/
+- type: ContactForm
+  url: https://laserhub.com/kontakt/
+- type: TermsOfService
+  url: https://laserhub.com/agb/
+- type: PrivacyPolicy
+  url: https://laserhub.com/datenschutz/
+- type: Imprint
+  url: https://laserhub.com/impressum/
+- type: ChangeLog
+  name: Laserhub Plattform Updates
+  url: https://laserhub.com/release-notes/
+- type: ChangeLog
+  name: Laserhub changelog artifact
+  url: changelog/laserhub-changelog.yml
+- type: Guidelines
+  name: Konstruktions-Richtlinien (design guidelines)
+  url: https://laserhub.com/plattform/konstruktion/
+- type: Knowledge
+  name: Wissenswelt
+  url: https://laserhub.com/wissenswelt/
+- type: Press
+  url: https://laserhub.com/ueber-uns/presse/
+- type: Careers
+  url: https://laserhub.com/career/
+- type: LLMsTxt
+  name: Laserhub llms.txt
+  url: llms/laserhub-llms.txt
+- type: DomainSecurity
+  name: Laserhub domain security probe
+  url: security/laserhub-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
