@@ -1,0 +1,55 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of the Laserhub public hosts
+found: false
+notes: >-
+  No /.well-known/ discovery documents are published on any Laserhub host. laserhub.com (WordPress)
+  returns hard 404s. app.laserhub.com is a single-page app whose server returns the SPA shell
+  (HTTP 200, content-type text/html, 6963 bytes) for every /.well-known/ path, so those 200s are
+  soft-404s and not real documents. api.laserhub.com is a private AWS API Gateway that answers every
+  unauthenticated request with HTTP 403 MissingAuthenticationTokenException. Absence recorded as
+  valid data - nothing was saved and no WellKnown/SecurityTxt pointer is wired.
+hosts:
+- host: https://laserhub.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://app.laserhub.com
+  note: all paths return the SPA shell (soft 404) - not real documents
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    soft_404: true
+  - path: /.well-known/openid-configuration
+    status: 200
+    soft_404: true
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    soft_404: true
+  - path: /.well-known/api-catalog
+    status: 200
+    soft_404: true
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    soft_404: true
+- host: https://api.laserhub.com
+  note: private AWS API Gateway - 403 MissingAuthenticationTokenException on every path
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403

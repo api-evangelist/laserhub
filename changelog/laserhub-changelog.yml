@@ -1,0 +1,133 @@
+generated: '2026-07-19'
+method: searched
+source: https://laserhub.com/release-notes/
+name: Laserhub Plattform Updates (Release Notes)
+url: https://laserhub.com/release-notes/
+language: de
+scheme: undated-rolling
+notes: >-
+  Laserhub publishes platform release notes as an undated, rolling page grouped into a current
+  section ("Aktuelle Release Notes") and a prior-year section ("Release Notes fuer 2025"). Entries
+  carry no version numbers or per-entry dates, and are segmented by audience: Kunden (buyers) and
+  Produzenten (the manufacturing network). No API, SDK, or integration changes appear in the
+  published notes - the surface is the web platform (app.laserhub.com) only.
+audiences:
+- kunden
+- produzenten
+sections:
+- section: Aktuelle Release Notes
+  audience: kunden
+  entries:
+  - title: Varianten direkt vergleichen
+    type: addition
+    summary: Multiple calculation variants can now be compared side by side - prices, delivery
+      times and configurations - with custom naming and flagging of important variants.
+  - title: Neues Angebot fuer Pulverbeschichtung
+    type: addition
+    summary: COATINQ added as a central powder-coating partner, giving consistent coating quality,
+      consistent colour rendering across orders, and a large RAL colour selection.
+  - title: Verbesserte Preisberechnung fuer Oberflaechen und Rohrlaserteile
+    type: improvement
+    summary: Pricing calculation reworked for powder-coated, galvanised and tube parts, with
+      revised explanatory notes.
+  - title: Praezisere Versandkostenberechnung
+    type: improvement
+    summary: Volumetric-weight calculation reworked so shipping costs are calculated more
+      accurately and presented more transparently.
+  - title: Neuer Infohub in der Plattform
+    type: addition
+    summary: In-platform notification hub in the lower right of the screen surfacing new features,
+      platform updates and relevant blog posts.
+  - title: CNC-Kalkulation optimiert
+    type: improvement
+    summary: Automatic detection of CNC parts optimised, improving automated feasibility checks.
+- section: Release Notes fuer 2025
+  audience: kunden
+  entries:
+  - title: Angebot fuer Pressmuttern optimiert
+    type: improvement
+    summary: Secondary-process handling reworked for press nuts, yielding more reliable quotes.
+  - title: Angebot fuer Durchzugsgewinde optimiert
+    type: improvement
+    summary: Secondary-process handling reworked for extruded threads, yielding more reliable
+      quotes.
+  - title: Erneute Bestellung via E-Mail
+    type: addition
+    summary: Customers can re-place a previously successful order by email.
+  - title: Optimierung der Bestellung via E-Mail
+    type: improvement
+    summary: Email-based ordering (still in test phase for a subset of customers) further
+      optimised; Laserhub staff can adjust the delivery window on delayed confirmations.
+  - title: Automatische Registrierung bei einer Anfrage per E-Mail
+    type: addition
+    summary: New customers emailing a price request to anfrage@laserhub.com now get an account
+      created automatically with their configuration pre-loaded.
+  - title: Optimierung der Angebots-PDF
+    type: improvement
+    summary: Quote PDF reworked; quotes now show pricing for several delivery windows.
+  - title: Entlastungsschnitte
+    type: improvement
+    summary: More precise automatic analysis of required relief cuts and critical minimum leg
+      lengths.
+  - title: Optimierter Versand
+    type: improvement
+    summary: Shipping-method selection process optimised, improving delivery pricing and delivery
+      date accuracy.
+  - title: Einfache Stornierung von Auftraegen
+    type: addition
+    summary: Customers can self-cancel orders in the platform as long as the order has not entered
+      production at the producer.
+  - title: Massen-Bearbeitung von Gravuren
+    type: addition
+    summary: Engravings can be configured in bulk across selected positions (position name, file
+      name, or text).
+  - title: Dicke Bleche bis 75 mm
+    type: addition
+    summary: Maximum cuttable sheet thickness raised from 50 mm to 75 mm.
+  - title: Dickblech bei Laserhub bestellen
+    type: addition
+    summary: Plasma cutting and flame cutting added alongside laser cutting for sheets thicker than
+      25 mm.
+  - title: Laserhub fuer Schweizer Kunden
+    type: addition
+    summary: Companies with a Swiss VAT ID can now order via Laserhub.
+  - title: Drehteile bis 1 Meter
+    type: addition
+    summary: Maximum turned-part length raised from 80 cm to 1 m, automatically for every customer.
+  - title: Schnellerer Bestellvorgang fuer Gewindedurchzuege und Einpressmuttern
+    type: improvement
+    summary: Extruded threads and press-in nuts can be ordered without manual review by the
+      Laserhub team.
+  - title: Verbleibendes Rohmaterial fuer Rohre
+    type: addition
+    summary: Platform now shows remaining raw tube length so customers can use up their material.
+  - title: Musterteile fuer alle Arten von Bestellungen
+    type: addition
+    summary: Sample parts, previously limited to framework agreements, extended to all orders (such
+      orders become manual enquiries).
+  - title: Fehlerbehebungen / Aufgeraeumt
+    type: fix
+    summary: Dedicated cycles on smaller bug fixes, code cleanup and performance work.
+- section: Release Notes fuer 2025
+  audience: produzenten
+  entries:
+  - title: Aufgabensystem optimiert
+    type: improvement
+    summary: Producer task system made clearer and extensible, capturing which processes and
+      materials each producer offers.
+  - title: Transparenz bei stornierten Auftraegen
+    type: improvement
+    summary: Producers now see the reason an order was cancelled.
+  - title: Optimierte Reihenfolge der Bestellungen
+    type: improvement
+    summary: Order list sorted by current status for a better producer overview.
+  - title: Neue Informationen zur Lieferzeit von Bestellungen
+    type: addition
+    summary: Producers get a transparent view of how quoted lead time influences order allocation.
+  - title: Neue Web-Oberflaeche
+    type: addition
+    summary: Reworked producer web interface for faster order processing.
+  - title: Schnellere manuelle Angebote dank vereinfachter Kommunikation
+    type: addition
+    summary: Chat added in the producer area to speed up manual quoting.
+breaking_changes: []
