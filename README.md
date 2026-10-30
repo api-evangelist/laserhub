@@ -64,44 +64,86 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Laserhub is a Stuttgart-based digital procurement platform for custom-manufactured metal and plastic
-parts. Buyers upload CAD files to app.laserhub.com, get an automated feasibility check and an
-instant quote across laser / plasma / flame cutting, tube laser cutting, bending, CNC turning and
-milling, weldments and secondary processes, and Laserhub — as the contracting party — allocates the
-order across a network of roughly 100 ISO 9001:2015 certified producers in Germany, Austria and
-Switzerland.
+Laserhub is a Stuttgart-based digital procurement platform for custom-manufactured metal and plastic parts, founded to replace the traditional RFQ cycle for sheet metal, tube and machined components with instant online quoting. Buyers register at app.laserhub.com, upload CAD files, and receive an automated feasibility check plus an instant quote covering laser cutting, plasma and flame cutting, tube laser cutting, bending, CNC turning and milling, weldments, and secondary processes such as threading, deburring, galvanising, powder coating and engraving. Laserhub is itself the contracting party and allocates each order algorithmically across a network of roughly 100 ISO 9001:2015 certified producers in Germany, Austria and Switzerland, serving both SMEs and DAX40 manufacturers with framework agreements, a parts library, sample parts, inspection certificates and design guidelines. Laserhub publishes no public developer API, SDK, or API documentation as of this profile: api.laserhub.com is a private AWS API Gateway that rejects unauthenticated requests, and the only machine-adjacent ordering channel the company documents is an email-based ordering flow (anfrage@laserhub.com) that its own release notes describe as still in a test phase for a subset of customers.
 
-- Website: https://laserhub.com
-- Platform: https://app.laserhub.com
-- Release notes: https://laserhub.com/release-notes/
-- Backed by: point-nine
+**Areas:** Company · Manufacturing · Metal Fabrication · Procurement · Laser Cutting · CNC Machining · Sheet Metal · Supply Chain · Marketplace · Industrial · Germany
 
-## API surface
+## Laserhub on APIs.io
 
-**Laserhub publishes no public developer API.** Verified 2026-07-19:
+Everything profiled for Laserhub is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/laserhub/](https://apis.io/providers/laserhub/)** — or go straight to one of the APIs or properties below.
 
-- No `/api`, `/developers`, `/docs`, or `Schnittstelle`/ERP-integration page exists in the site's
-  264-URL sitemap, and the platform overview pages document no API, SDK, or PLM/ERP connector.
-- `api.laserhub.com` resolves to a **private AWS API Gateway** — every unauthenticated request
-  returns `403 MissingAuthenticationTokenException`. It backs the first-party web app only.
-- `developer.laserhub.com` and `docs.laserhub.com` do not resolve.
-- `github.com/laserhub` is an unrelated personal account (one `TestLab` repo), not a Laserhub org.
-- The closest machine-adjacent channel Laserhub documents is **ordering by email**
-  (`anfrage@laserhub.com`), which its own release notes describe as still in a test phase for a
-  subset of customers.
+### Published properties
 
-Consequently no `openapi/`, `mcp/`, `skills/`, `scopes/`, `authentication/`, `errors/`,
-`data-model/`, `overlays/`, `arazzo/`, or `packages/` artifacts exist here — nothing was fabricated
-to fill them.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Artifacts
+#### Security (1)
 
-| Artifact | Path | Method |
-|---|---|---|
-| llms.txt | `llms/laserhub-llms.txt` | searched (verbatim, https://laserhub.com/llms.txt) |
-| Changelog | `changelog/laserhub-changelog.yml` | searched (release-notes page) |
-| Domain security | `security/laserhub-domain-security.yml` | probed |
-| Well-known probe | `well-known/laserhub-well-known.yml` | searched (none published) |
+Authentication, trust centre, and vulnerability disclosure.
 
-Vulnerability-disclosure and trust-center probes returned no hits; no `/.well-known/security.txt`,
-no bug-bounty program, and no status page (`status.laserhub.com` does not resolve) were found.
+- [Laserhub Domain Security](https://apis.io/security/laserhub/laserhub-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://laserhub.com)
+- [Pricing](https://laserhub.com/plattform/preise/)
+- [Sign up](https://app.laserhub.com/register/email)
+- [Support](https://laserhub.com/plattform/kundenservice/)
+- [Changelog](https://laserhub.com/release-notes/)
+- [Blog](https://laserhub.com/blog/)
+- [Terms of service](https://laserhub.com/agb/)
+- [Privacy policy](https://laserhub.com/datenschutz/)
+
+## API Evangelist rating
+
+**Kin Score 16.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 38.2 |
+
+**Agent readiness 2.9** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/laserhub/](https://apis.io/providers/laserhub/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Laserhub: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/laserhub/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
